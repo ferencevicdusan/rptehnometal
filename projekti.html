@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekti - RP Tehnometal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projekti.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>RP Tehnometal</h1>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Početna</a>
+            <a href="index.html#about">O Nama</a>
+            <a href="index.html#services">Usluge</a>
+            <a href="projekti.html">Projekti</a>
+            <a href="index.html#contact">Kontakt</a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Projects Header -->
+    <section class="projects-header">
+        <div class="container">
+            <h1 data-aos="fade-up">Naši Projekti</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Pogledajte neke od naših najznačajnijih projekata</p>
+        </div>
+    </section>
+
+    <!-- Projects Gallery -->
+    <section class="projects-gallery">
+        <div class="container">
+            <div class="gallery-grid">
+                <!-- Project 1 -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <div class="gallery-image">
+                        <img src="Slike/Snimak ekrana 2021-11-17 103411.webp" alt="Industrijski Objekat">
+                        <div class="gallery-overlay">
+                            <button class="view-project" data-project="project1">Pogledaj Detalje</button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Industrijski Objekat</h3>
+                        <p>Montaža čelične konstrukcije za industrijski objekat</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="gallery-image">
+                        <img src="Slike/Snimak ekrana 2021-11-17 103337.webp" alt="Komercijalni Centar">
+                        <div class="gallery-overlay">
+                            <button class="view-project" data-project="project2">Pogledaj Detalje</button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Komercijalni Centar</h3>
+                        <p>Kompletna montaža čelične konstrukcije</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="gallery-image">
+                        <img src="Slike/Snimak ekrana 2021-11-17 103142.webp" alt="Skladišni Objekat">
+                        <div class="gallery-overlay">
+                            <button class="view-project" data-project="project3">Pogledaj Detalje</button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Skladišni Objekat</h3>
+                        <p>Montaža skladišnog objekta</p>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <div class="gallery-image">
+                        <img src="Slike/Snimak ekrana 2021-11-17 103316.webp" alt="Projekat 4">
+                        <div class="gallery-overlay">
+                            <button class="view-project" data-project="project4">Pogledaj Detalje</button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Proizvodni Pogon</h3>
+                        <p>Montaža proizvodnog pogona</p>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="gallery-image">
+                        <img src="Slike/Snimak ekrana 2021-11-17 103223.webp" alt="Projekat 5">
+                        <div class="gallery-overlay">
+                            <button class="view-project" data-project="project5">Pogledaj Detalje</button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Logistički Centar</h3>
+                        <p>Montaža logističkog centra</p>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="gallery-image">
+                        <img src="Slike/Snimak ekrana 2021-11-17 103029.webp" alt="Projekat 6">
+                        <div class="gallery-overlay">
+                            <button class="view-project" data-project="project6">Pogledaj Detalje</button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Poslovni Objekat</h3>
+                        <p>Montaža poslovnog objekta</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-images">
+                    <img src="" alt="Project Image" class="main-image">
+                    <div class="thumbnail-container">
+                        <!-- Thumbnails will be added dynamically -->
+                    </div>
+                </div>
+                <div class="modal-info">
+                    <h2></h2>
+                    <div class="project-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="location"></span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-calendar"></i>
+                            <span class="date"></span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-ruler-combined"></i>
+                            <span class="size"></span>
+                        </div>
+                    </div>
+                    <div class="project-description"></div>
+                    <div class="project-features">
+                        <h3>Ključne Karakteristike</h3>
+                        <ul></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>RP Tehnometal</h3>
+                    <p>Profesionalna montaža čeličnih konstrukcija</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RP Tehnometal. Sva prava zadržana.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="projekti.js"></script>
+</body>
+</html> 

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naše Usluge - RP Tehnometal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="usluge.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html#home">
+                <img src="Slike/logo/rp-tehnometal-logo.svg" alt="RP Tehnometal Logo" class="logo-img">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html#home">Početna</a>
+            <a href="index.html#about">O Nama</a>
+            <a href="index.html#usluge">Usluge</a>
+            <a href="index.html#projects">Projekti</a>
+            <a href="index.html#contact">Kontakt</a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Services Header -->
+    <section class="services-header">
+        <div class="container">
+            <h1 data-aos="fade-up">Naše Usluge</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Profesionalne metalne konstrukcije i građevinske usluge</p>
+        </div>
+    </section>
+
+    <!-- Detailed Services -->
+    <section class="detailed-services">
+        <div class="container">
+            <div class="service-category" data-aos="fade-up">
+                <h2>Metalne Konstrukcije</h2>
+                <div class="service-grid">
+                    <div class="service-item">
+                        <i class="fas fa-building"></i>
+                        <h3>Industrijske Zgrade</h3>
+                        <p>Projektiranje i izrada industrijskih objekata, skladišta i proizvodnih hala prema najvišim standardima.</p>
+                        <ul>
+                            <li>Hale i skladišta</li>
+                            <li>Proizvodni pogoni</li>
+                            <li>Logistički centri</li>
+                        </ul>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-industry"></i>
+                        <h3>Krovne Konstrukcije</h3>
+                        <p>Kompletne krovne konstrukcije za sve vrste objekata, s naglaskom na kvalitetu i trajnost.</p>
+                        <ul>
+                            <li>Krovne rešetke</li>
+                            <li>Krovne rešetke</li>
+                            <li>Krovne rešetke</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-category" data-aos="fade-up">
+                <h2>Građevinske Usluge</h2>
+                <div class="service-grid">
+                    <div class="service-item">
+                        <i class="fas fa-tools"></i>
+                        <h3>Montaža i Demontaža</h3>
+                        <p>Profesionalne usluge montaže i demontaže metalnih konstrukcija s posebnim osvrtom na sigurnost.</p>
+                        <ul>
+                            <li>Montaža konstrukcija</li>
+                            <li>Demontaža postojećih objekata</li>
+                            <li>Renoviranje i adaptacija</li>
+                        </ul>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-hard-hat"></i>
+                        <h3>Građevinske Usluge</h3>
+                        <p>Kompletne građevinske usluge za sve faze projekta, od pripreme do završnih radova.</p>
+                        <ul>
+                            <li>Pripremni radovi</li>
+                            <li>Glavni građevinski radovi</li>
+                            <li>Završni radovi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section" id="kontakt">
+        <div class="container">
+            <h2 data-aos="fade-up">Kontaktirajte Nas</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Imate pitanje ili želite ponudu? Javite nam se!</p>
+            
+            <div class="contact-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Adresa</h3>
+                            <p>Ulica i broj, Grad, Hrvatska</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Telefon</h3>
+                            <p>+385 XX XXX XXX</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@rptehnometal.hr</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Vaše ime" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Vaš email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Vaš telefon">
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Odaberite uslugu</option>
+                            <option value="metalne">Metalne konstrukcije</option>
+                            <option value="krovne">Krovne konstrukcije</option>
+                            <option value="montaza">Montaža i demontaža</option>
+                            <option value="gradjevinske">Građevinske usluge</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Vaša poruka" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Pošalji poruku</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>RP Tehnometal</h3>
+                    <p>Vaš pouzdani partner u metalnim konstrukcijama</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RP Tehnometal. Sva prava pridržana.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
