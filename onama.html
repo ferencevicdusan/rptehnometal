@@ -13,14 +13,19 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="logo">
-            <h1>RP Tehnometal</h1>
+            <a href="index.html#home">
+                <img src="Slike/logo/rp-tehnometal-logo.svg" alt="RP Tehnometal Logo" class="logo-img">
+            </a>
         </div>
         <div class="nav-links">
-            <a href="index.html">Početna</a>
-            <a href="onama.html">O Nama</a>
-            <a href="index.html#services">Usluge</a>
+            <a href="index.html#home">Početna</a>
+            <a href="onama.html" class="active">O Nama</a>
+            <a href="index.html#usluge">Usluge</a>
             <a href="projekti.html">Projekti</a>
             <a href="index.html#contact">Kontakt</a>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
         <div class="hamburger">
             <span></span>
@@ -28,6 +33,11 @@
             <span></span>
         </div>
     </nav>
+
+    <!-- Back Arrow -->
+    <a href="index.html#about" class="back-arrow" aria-label="Back to home">
+        <i class="fas fa-arrow-left"></i>
+    </a>
 
     <!-- About Header -->
     <section class="about-header">

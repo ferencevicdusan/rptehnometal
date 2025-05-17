@@ -23,20 +23,54 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Mobile menu toggle
+// Theme toggle functionality
+const themeToggle = document.getElementById('theme-toggle');
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+// Check for saved theme preference or use system preference
+const currentTheme = localStorage.getItem('theme') || 
+    (prefersDarkScheme.matches ? 'dark' : 'light');
+
+// Apply theme on load
+document.documentElement.setAttribute('data-theme', currentTheme);
+updateThemeIcon(currentTheme);
+
+// Theme toggle click handler
+themeToggle.addEventListener('click', () => {
+    const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon(newTheme);
+});
+
+// Update theme icon
+function updateThemeIcon(theme) {
+    const icon = themeToggle.querySelector('i');
+    icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+}
+
+// Mobile menu functionality
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', () => {
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
     hamburger.classList.toggle('active');
-    
-    // Add animation to nav links
-    const links = navLinks.querySelectorAll('a');
-    links.forEach((link, index) => {
-        link.style.animation = navLinks.style.display === 'flex' 
-            ? `slideIn 0.3s ease forwards ${index * 0.1}s`
-            : 'none';
+    navLinks.classList.toggle('active');
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+    }
+});
+
+// Close mobile menu when clicking a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
     });
 });
 
@@ -145,9 +179,17 @@ document.querySelectorAll('.service-card, .project-card, .about-content, .contac
 
 // Function to handle scroll-based navigation highlighting
 function updateActiveNavLink() {
+    // Check if we're on the usluge.html page
+    const isUslugePage = window.location.pathname.includes('usluge.html');
+    
+    // If we're on usluge.html, don't do anything
+    if (isUslugePage) {
+        return;
+    }
+    
+    // For index.html, use scroll-based highlighting
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a');
-    
     let currentSection = '';
     
     sections.forEach(section => {
@@ -169,6 +211,11 @@ function updateActiveNavLink() {
 // Add scroll event listener with throttling
 let ticking = false;
 window.addEventListener('scroll', () => {
+    // Don't add scroll listener on usluge.html
+    if (window.location.pathname.includes('usluge.html')) {
+        return;
+    }
+    
     if (!ticking) {
         window.requestAnimationFrame(() => {
             updateActiveNavLink();
@@ -180,6 +227,9 @@ window.addEventListener('scroll', () => {
 
 // Call once on page load
 document.addEventListener('DOMContentLoaded', () => {
-    updateActiveNavLink();
+    // Don't update active states on usluge.html
+    if (!window.location.pathname.includes('usluge.html')) {
+        updateActiveNavLink();
+    }
     AOS.refresh();
 }); 
