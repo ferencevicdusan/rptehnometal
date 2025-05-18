@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="220" height="55" viewBox="0 0 220 55" xmlns="http://www.w3.org/2000/svg">
     <!-- RP Text -->
-    <text x="25" y="35" font-family="'Segoe UI', Arial, sans-serif" font-weight="600" font-size="24" fill="#2c3e50" letter-spacing="1">
+    <text x="25" y="35" font-family="'Segoe UI', Arial, sans-serif" font-weight="600" font-size="24" fill="currentColor" letter-spacing="1" class="logo-letters">
         RP
     </text>
     
     <!-- Tehnometal Text -->
-    <text x="75" y="35" font-family="'Segoe UI', Arial, sans-serif" font-weight="400" font-size="20" fill="#2c3e50" letter-spacing="0.5">
+    <text x="75" y="35" font-family="'Segoe UI', Arial, sans-serif" font-weight="400" font-size="20" fill="currentColor" letter-spacing="0.5" class="logo-text">
         Tehnometal
     </text>
     
     <!-- Subtle separator line -->
-    <line x1="70" y1="15" x2="70" y2="40" stroke="#e74c3c" stroke-width="1" stroke-linecap="round"/>
+    <line x1="70" y1="15" x2="70" y2="40" stroke="currentColor" stroke-width="1" stroke-linecap="round" class="logo-line"/>
     
     <!-- Simplified gear icon -->
-    <g transform="translate(190, 28) scale(0.9)">
-        <circle cx="0" cy="0" r="8" fill="none" stroke="#e74c3c" stroke-width="1"/>
-        <circle cx="0" cy="0" r="4" fill="none" stroke="#e74c3c" stroke-width="1"/>
-        <path d="M0-8 L0-12 M8 0 L12 0 M0 8 L0 12 M-8 0 L-12 0" stroke="#e74c3c" stroke-width="1" stroke-linecap="round"/>
+    <g transform="translate(190, 28) scale(0.9)" class="logo-icon">
+        <circle cx="0" cy="0" r="8" fill="none" stroke="currentColor" stroke-width="1"/>
+        <circle cx="0" cy="0" r="4" fill="none" stroke="currentColor" stroke-width="1"/>
+        <path d="M0-8 L0-12 M8 0 L12 0 M0 8 L0 12 M-8 0 L-12 0" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
     </g>
 </svg> 

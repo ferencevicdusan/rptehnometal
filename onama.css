@@ -5,18 +5,163 @@
                 url('Slike/hero.jpg') center/cover no-repeat;
     text-align: center;
     color: var(--white);
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
+    pointer-events: none;
 }
 
 .about-header h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 20px;
 }
 
 .about-header p {
     font-size: 1.2rem;
     max-width: 600px;
     margin: 0 auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+    line-height: 1.6;
+}
+
+/* Mobile Responsive Hero Styles */
+@media (max-width: 992px) {
+    .about-header {
+        padding: 120px 0 40px;
+        min-height: 350px;
+    }
+
+    .about-header h1 {
+        font-size: 2.8rem;
+    }
+
+    .about-header p {
+        font-size: 1.1rem;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-header {
+        padding: 100px 0 30px;
+        min-height: 300px;
+    }
+
+    .about-header h1 {
+        font-size: 2.2rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .about-header p {
+        font-size: 1rem;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-header {
+        padding: 80px 0 25px;
+        min-height: 250px;
+    }
+
+    .about-header h1 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        padding: 0 15px;
+    }
+
+    .about-header p {
+        font-size: 0.95rem;
+        max-width: 320px;
+        padding: 0 15px;
+    }
+}
+
+/* Dark Theme Hero Adjustments */
+[data-theme="dark"] .about-header {
+    background: linear-gradient(135deg,
+        rgba(26, 32, 44, 0.95),
+        rgba(43, 108, 176, 0.85)
+    ),
+    url('Slike/image_50434817.webp') center/cover no-repeat fixed;
+    position: relative;
+}
+
+[data-theme="dark"] .about-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle at center,
+        rgba(66, 153, 225, 0.1) 0%,
+        rgba(26, 32, 44, 0.95) 70%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+[data-theme="dark"] .about-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(
+        to top,
+        rgba(26, 32, 44, 1),
+        rgba(26, 32, 44, 0)
+    );
+    z-index: 1;
+}
+
+[data-theme="dark"] .about-header-content {
+    position: relative;
+    z-index: 2;
+}
+
+[data-theme="dark"] .about-header h1 {
+    color: #ffffff;
+    text-shadow: 
+        0 0 20px rgba(66, 153, 225, 0.2),
+        0 0 40px rgba(66, 153, 225, 0.1);
+    font-weight: 700;
+    letter-spacing: 2px;
+    -webkit-text-stroke: 0.5px rgba(66, 153, 225, 0.2);
+    text-stroke: 0.5px rgba(66, 153, 225, 0.2);
+}
+
+[data-theme="dark"] .about-header p {
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 
+        0 0 15px rgba(66, 153, 225, 0.15),
+        0 0 30px rgba(66, 153, 225, 0.1);
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
 /* Main About Content */
