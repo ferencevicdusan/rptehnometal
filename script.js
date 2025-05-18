@@ -179,11 +179,13 @@ document.querySelectorAll('.service-card, .project-card, .about-content, .contac
 
 // Function to handle scroll-based navigation highlighting
 function updateActiveNavLink() {
-    // Check if we're on the usluge.html page
-    const isUslugePage = window.location.pathname.includes('usluge.html');
+    // Check if we're on specific pages where we want to keep the active state
+    const isSpecificPage = window.location.pathname.includes('onama.html') || 
+                          window.location.pathname.includes('usluge.html') ||
+                          window.location.pathname.includes('projekti.html');
     
-    // If we're on usluge.html, don't do anything
-    if (isUslugePage) {
+    // If we're on a specific page, don't update active states
+    if (isSpecificPage) {
         return;
     }
     
@@ -211,8 +213,10 @@ function updateActiveNavLink() {
 // Add scroll event listener with throttling
 let ticking = false;
 window.addEventListener('scroll', () => {
-    // Don't add scroll listener on usluge.html
-    if (window.location.pathname.includes('usluge.html')) {
+    // Don't add scroll listener on specific pages
+    if (window.location.pathname.includes('onama.html') || 
+        window.location.pathname.includes('usluge.html') ||
+        window.location.pathname.includes('projekti.html')) {
         return;
     }
     
@@ -227,8 +231,10 @@ window.addEventListener('scroll', () => {
 
 // Call once on page load
 document.addEventListener('DOMContentLoaded', () => {
-    // Don't update active states on usluge.html
-    if (!window.location.pathname.includes('usluge.html')) {
+    // Don't update active states on specific pages
+    if (!window.location.pathname.includes('onama.html') && 
+        !window.location.pathname.includes('usluge.html') &&
+        !window.location.pathname.includes('projekti.html')) {
         updateActiveNavLink();
     }
     AOS.refresh();
